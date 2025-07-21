@@ -85,6 +85,59 @@
         </div>
     </div>
 
-<script src="script.js"></script>
+<script src="script.min.js"></script>
+<script>
+// filepath: c:\Users\kd2qq\github\binary-clock-new\binaryclock.html
+(function() {
+    // Check for meta description
+    if (!document.querySelector('meta[name="description"]')) {
+        console.warn('Missing meta description tag.');
+    }
+
+    // Check for lang attribute
+    if (!document.documentElement.lang) {
+        console.warn('Missing lang attribute on <html> tag.');
+    }
+
+    // Check for minified CSS/JS (very basic check)
+    document.querySelectorAll('link[rel="stylesheet"], script[src]').forEach(el => {
+        const src = el.href || el.src;
+        if (src && !src.includes('.min.') && !src.includes('tailwind')) {
+            console.warn('Possible unminified asset:', src);
+        }
+    });
+
+    // Check for accessibility: button labels
+    document.querySelectorAll('button').forEach(btn => {
+        if (!btn.textContent.trim()) {
+            console.warn('Button with no accessible label:', btn);
+        }
+    });
+
+    // Check for responsive meta tag
+    if (!document.querySelector('meta[name="viewport"]')) {
+        console.warn('Missing viewport meta tag for responsiveness.');
+    }
+
+    // Check for images without alt text
+    document.querySelectorAll('img').forEach(img => {
+        if (!img.alt) {
+            console.warn('Image missing alt attribute:', img);
+        }
+    });
+
+    // Check for console errors (not possible from here, but remind user)
+    console.info('Reminder: Check the browser console for JavaScript errors or warnings.');
+
+    // Check for favicon
+    if (!document.querySelector('link[rel="icon"]')) {
+        console.warn('Missing favicon.');
+    }
+
+    // All checks done
+    console.info('Production checklist completed.');
+})();
+</script>
+
 </body>
 </html>

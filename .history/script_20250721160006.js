@@ -44,19 +44,6 @@ function updateClock() {
     digitalClock.textContent = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
 }
 
-// Fallback fact generator
-function getLocalTimeFact(h, m) {
-    const facts = [
-        `Did you know? ${h}:00 is a great time to stretch!`,
-        `At ${h}:${m}, the sun is in a different position around the world.`,
-        `Binary for ${h} is ${h.toString(2)}, and for ${m} is ${m.toString(2)}.`,
-        `Fun fact: ${h}:${m} in 24-hour time is ${((h % 12) || 12)}:${m.toString().padStart(2, '0')} ${h < 12 ? 'AM' : 'PM'}.`,
-        `Some clocks chime at ${h}:${m}!`,
-        `In binary, ${h}:${m} is ${h.toString(2).padStart(6, '0')}:${m.toString(2).padStart(6, '0')}.`
-    ];
-    return facts[m % facts.length];
-}
-
 async function getTimeFact() {
     geminiButton.disabled = true;
     geminiButton.textContent = 'Thinking...';
@@ -75,10 +62,10 @@ async function getTimeFact() {
 
         if (!response.ok) throw new Error(`Error: ${response.statusText}`);
         const data = await response.json();
-        factContainer.textContent = data.fact || getLocalTimeFact(h, m);
+        factContainer.textContent = data.fact || "No fact received.";
     } catch (error) {
         console.error(error);
-        factContainer.textContent = getLocalTimeFact(h, m);
+        factContainer.textContent = "Sorry, I couldn't fetch a fact.";
     } finally {
         geminiButton.disabled = false;
         geminiButton.textContent = 'Get Time Fact ✨';
