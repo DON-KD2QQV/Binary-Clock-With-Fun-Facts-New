@@ -1,4 +1,6 @@
-
+[![Auto Assign](https://github.com/DON-KD2QQV/Binary-Clock-With-Fun-Facts-New/actions/workflows/auto-assign.yml/badge.svg?branch=main)](https://github.com/DON-KD2QQV/Binary-Clock-With-Fun-Facts-New/actions/workflows/auto-assign.yml)
+[![pages-build-deployment](https://github.com/DON-KD2QQV/Binary-Clock-With-Fun-Facts-New/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)](https://github.com/DON-KD2QQV/Binary-Clock-With-Fun-Facts-New/actions/workflows/pages/pages-build-deployment)
+[![Proof HTML](https://github.com/DON-KD2QQV/Binary-Clock-With-Fun-Facts-New/actions/workflows/proof-html.yml/badge.svg?branch=main)](https://github.com/DON-KD2QQV/Binary-Clock-With-Fun-Facts-New/actions/workflows/proof-html.yml)
 
 🕒 Binary Clock with Tailwind CSS v4 + Fun Time Facts
 
