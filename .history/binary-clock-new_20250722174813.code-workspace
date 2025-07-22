@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "css"
+		},
+		{
+			"path": "js"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "binary-clock-new"
+	}
+}
