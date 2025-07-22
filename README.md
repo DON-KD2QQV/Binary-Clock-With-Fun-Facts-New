@@ -3,6 +3,7 @@
 [![Proof HTML](https://github.com/DON-KD2QQV/Binary-Clock-With-Fun-Facts-New/actions/workflows/proof-html.yml/badge.svg?branch=main)](https://github.com/DON-KD2QQV/Binary-Clock-With-Fun-Facts-New/actions/workflows/proof-html.yml)
 
 🕒 Binary Clock with Tailwind CSS v4 + Fun Time Facts
+Authored by Don Bryant KD2QQV
 
 A visual binary LED-style clock with a real-time digital display, animated UI using Tailwind CSS, and a fun "Time Fact" button — all built with pure HTML, Tailwind CSS, and JavaScript.
 
