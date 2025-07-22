@@ -10,7 +10,5 @@
 			"path": "js"
 		}
 	],
-	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "binary-clock-new"
-	}
+	"settings": {}
 }
