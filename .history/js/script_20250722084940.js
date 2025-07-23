@@ -1,4 +1,3 @@
-// Author :Don Bryant
 const hourColumn = document.getElementById('hours');
 const minuteColumn = document.getElementById('minutes');
 const secondColumn = document.getElementById('seconds');
